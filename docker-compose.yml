@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: yt-mp3-backend
+    ports:
+      - "5001:5001"
+    volumes:
+      - audio_data:/app/temp_audio
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: yt-mp3-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  audio_data:
+    driver: local
