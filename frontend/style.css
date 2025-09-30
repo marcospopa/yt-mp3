@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #5f6368;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#youtube-url {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#youtube-url:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+#convert-btn {
+    padding: 12px 25px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#convert-btn:hover {
+    background-color: #155ab6;
+}
+
+#convert-btn:disabled {
+    background-color: #a0c3ff;
+    cursor: not-allowed;
+}
+
+#status-container {
+    margin-top: 20px;
+    min-height: 24px; /* Reserve space for the message */
+}
+
+#status-message {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.loading {
+    color: #1a73e8;
+}
+
+.error {
+    color: #d93025;
+}
+
+.hidden {
+    display: none;
+}
+
+#results-container {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+#video-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#download-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.download-button {
+    display: block;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+}
+
+.low { background-color: #4caf50; color: white; }
+.medium { background-color: #ff9800; color: white; }
+.high { background-color: #f44336; color: white; }
